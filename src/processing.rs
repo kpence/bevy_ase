@@ -125,7 +125,7 @@ fn move_sprites(
     file_assets: &mut Option<&mut AseAssetMap>,
 ) -> (Vec<SpriteData<Handle<Image>>>, Handle<TextureAtlas>) {
     let SpriteImportResources { textures, atlases } = resources;
-    let mut texture_atlas_builder = TextureAtlasBuilder::default();
+    let mut texture_atlas_builder = TextureAtlasBuilder::default().max_size(Vec2::new(77440., 2048.));
     let sprite_handles: Vec<SpriteData<Handle<Image>>> = sprites
         .into_iter()
         .map(
